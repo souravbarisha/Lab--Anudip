@@ -30,7 +30,7 @@ public static void main(String[] args) {
 	  boolean flag = false;
 	  for(int i=0;i<str1.length();i++) {
 		    for(int j=0;j<str2.length();j++) {
-			  if (Character.isLowerCase(str1.charAt(i)) == Character.isLowerCase(str2.charAt(j))){
+			  if (Character.toLowerCase(str1.charAt(i)) == Character.toLowerCase(str2.charAt(j))){
 				  flag = true;
 				  break;
 			  }
