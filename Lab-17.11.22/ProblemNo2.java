@@ -17,12 +17,13 @@ class NegativeNumberException extends Exception{
 public class ProblemNo2 {
 	public void checkNegative(int x, int y) throws NegativeNumberException{
 		
-			if(x<0 || y<0) {
-				throw new NegativeNumberException("x and y should not be zero");
+			if((-20<= x && y <=20) && (x!=0 && y>0)) {
+				System.out.println("Product of x and y is : "+ (x*y));
 			}
+			
 			else {
+				throw new NegativeNumberException("x and y should not be zero");
 				
-				System.out.println("Product of x and y is : "+ (x+y));
 			}
 			
 	}
