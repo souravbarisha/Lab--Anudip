@@ -18,9 +18,7 @@ class EmployeeNameInvalidException extends Exception{
 	}
 }
  class TaxCalculator {
-//	String empName;
-//	boolean isIndian;
-//	double empSal;
+
 	double taxAmount;
 	 void calculateTax (String empName,double empSal, boolean isIndian ) throws Exception {
 		if(isIndian == false) {
