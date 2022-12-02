@@ -28,7 +28,8 @@ public static void main(String[] args) {
 		break;
 	case 2:
 		try {
-			FileInputStream re = new FileInputStream("D:\\anudip\\lab1.txt");
+			FileInputStream re = null;
+			re = new FileInputStream("D:\\anudip\\lab1.txt");
 	 		//BufferedInputStream bb = new BufferedInputStream(re);
 	 		
 				if(re!=null) {
