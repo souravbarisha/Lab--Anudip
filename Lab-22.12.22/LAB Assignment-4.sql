@@ -41,20 +41,9 @@ insert into Movie values
 select * from movie;
 
 # 2. Prove that entity integrity constraint is ensured by both the tables. (2 conditions to be checked).
-insert into customer values
-(null,'Ivan','Ross','SA',6125467);  -- error because primary key can't be null
- -- for movie table
- insert into Movie values 
-(null,'A02','Bloody','JC',181); --  -- error because primary key can't be null
+
 # 3. Prove that referential integrity constraint is ensured by both the tables.
-insert into Movie values
-(20,'A11','Bloody','JC',181);  -- the movie table refer to the customer table so, 
--- due to the referential integrity constraint rule the cust_id which is not present inside the customer table that's why
--- the error will occur.
-insert into Movie values
-(Ab,'A02','Bloody','JC',188);
--- due to damain intigiry constraint we can't put character value in the Mo_no column 
--- because this column only contain integer value
+
 # 4. Prove that domain integrity constraint is ensured by the Movie table.
 
 # 5. Display the movie titles, whose price is greater than 100 but less than 200.
