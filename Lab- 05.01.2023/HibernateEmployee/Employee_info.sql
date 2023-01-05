@@ -1,0 +1,1 @@
+SELECT * FROM lab_souravdb.employee_info;
