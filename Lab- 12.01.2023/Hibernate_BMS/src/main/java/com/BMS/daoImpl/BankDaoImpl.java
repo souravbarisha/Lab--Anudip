@@ -95,11 +95,30 @@ public class BankDaoImpl implements BankDao{
 		Transaction t=session.beginTransaction();
 		Bank b=session.get(Bank.class, acc_no);
 		
-		System.out.println("you can edit your name: ");
-		System.out.println("Enter the new name: ");
-	    String acc_holder = sc.next();
-	    b.setAcc_holder(acc_holder);
-	    session.update(b);
+		System.out.println("PRESS 1 : To change Name \n PRESS 2 : To change Branch Name \n PRESS 3 : To change IFSC");
+		int x = sc.nextInt();
+		switch(x) {
+		case 1 : 
+			System.out.println("Enter the new name: ");
+		    String acc_holder = sc.next();
+		    b.setAcc_holder(acc_holder);
+		    session.update(b);
+		    break;
+		case 2 : 
+			System.out.println("Enter the new Branch Name: ");
+		    String branch = sc.next();
+		    b.setBranch(branch);
+		    session.update(b);
+		    break;
+		case 3 :
+			System.out.println("Enter the new IFSC: ");
+		    String ifsc = sc.next();
+		    b.setIfsc(ifsc);
+		    session.update(b);
+		    break;
+        default: System.out.println("Invalid Choice!");
+		}
+		
 	    System.out.println("Updated Successfully...");
 	    t.commit();
 		
