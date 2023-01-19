@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/data/jpa
+ https://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+ 
+ <bean id="TD" class="com.example.entity.TeacherDetails">
+ <constructor-arg  value="PHD"/>
+ <constructor-arg  value="80000.00"/>
+ <constructor-arg  value="aritra@gmail.com"/>
+ <constructor-arg  value="857906573"/>
+ </bean>
+ 
+ <bean id="T" class="com.example.entity.Teacher">
+ <constructor-arg  type="int" value="101"/>
+ <constructor-arg  type="String" value="Aritra"/>
+ <constructor-arg  type="String" value="Sen"/>
+ <constructor-arg>
+ <list>
+ <value>1st year CSE</value>
+ <value>1st year IT</value>
+ <value>2nd year CSE</value>
+ <value>3rd year IT</value>
+ <value>4th year IT</value>
+ </list>
+ </constructor-arg>
+ <constructor-arg>  <ref bean="TD"/> </constructor-arg>
+ </bean>
+ </beans>
